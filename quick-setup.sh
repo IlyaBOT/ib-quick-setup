@@ -28,12 +28,12 @@ Accessories:htop neofetch mc ark gparted
 Development:git vim gcc wine winetricks q4wine python3.11 python3.12 openjdk-17-jre openjdk-21-jre
 Games:lutris minetest supertuxkart ioquake3 freedoom
 Graphics:gimp inkscape krita kcolorchooser ghex
-Internet:firefox chromium hexchat tigervnc-client
+Internet:firefox chromium hexchat tigervnc-client filezilla links2
 Multimedia:vlc mpv audacity ex-falso
-Office:libreoffice
-System:gnome-tweaks gnome-tweak-tool dosbox 86box qemu virt-manager simple-scan cool-retro-term plank
+Office:libreoffice libreoffice-writer libreoffice-calc libreoffice-math libreoffice-draw simple-scan
+System:gnome-tweaks gnome-tweak-tool dosbox qemu-system-x86 qemu-system-arm qemu-system-ppc virt-manager cool-retro-term plank synaptic flatpak snapd
 Other:cowsay lolcat beep
-DesktopEnvironments:xfce4 lxde openbox kde-plasma-desktop gnome
+DesktopEnvironments:xfce4 lxde openbox kde-plasma-desktop gnome vanilla-gnome-desktop
 EOL
 fi
 
@@ -122,7 +122,10 @@ install_selected() {
             modprobe pcspkr
         fi
     done
-    if echo "$@" | grep -E "xfce4|lxde|openbox|kde-plasma-desktop|gnome"; then
+    if echo "$@" | grep -E "xfce4"; then
+        apt install -y "xfce4-goodies"
+    fi
+    if echo "$@" | grep -E "xfce4|lxde|openbox|kde-plasma-desktop|gnome|vanilla-gnome-desktop"; then
         dialog --msgbox "Installing multiple environments on the same system can cause problems. It is recommended to install only one desktop environment." 10 55
     fi
 }
