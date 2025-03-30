@@ -1,6 +1,12 @@
 #!/bin/bash
 #Script made by IlyaBOT 13.02.2025
 
+# TODO: Put the “git” installation check
+#       into a separate function and call it.
+# TODO: Make an item with GRUB configuration/customization.
+# TODO: When installing the WhiteSur theme, install
+#       also the theme for the Plank dock.
+
 # Checking that the script is run with root permissions
 #if [ "$EUID" -ne 0 ]; then
 if [ "$(id -nu)" != "root" ]; then
@@ -155,6 +161,7 @@ install_whitesur_theme() {
 
     if [[ "$response" -eq 0 ]]; then	
 		# Checking "git" installation
+
     	if ! command -v git &> /dev/null; then
     	    apt install -y git
     	fi
