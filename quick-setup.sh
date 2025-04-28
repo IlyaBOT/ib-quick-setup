@@ -31,9 +31,9 @@ REMOVE_LIST="remove_list.txt"
 if [ ! -f "$SOFTWARE_LIST" ]; then
     cat <<EOL > "$SOFTWARE_LIST"
 Accessories:htop neofetch mc ark gparted
-Development:git vim gcc wine winetricks q4wine python3.11 python3.12 openjdk-17-jre openjdk-21-jre
+Development:ghex git vim gcc wine winetricks q4wine python3.11 python3.12 openjdk-17-jre openjdk-21-jre
 Games:lutris minetest supertuxkart ioquake3 freedoom
-Graphics:gimp inkscape krita kcolorchooser ghex
+Graphics:gimp inkscape krita kcolorchooser
 Internet:firefox chromium hexchat tigervnc-client filezilla links2
 Multimedia:vlc mpv audacity ex-falso
 Office:libreoffice libreoffice-writer libreoffice-calc libreoffice-math libreoffice-draw simple-scan
@@ -50,6 +50,12 @@ rhythmbox
 cheese
 gnome-mines
 gnome-sudoku
+hypnotix
+celluloid
+warpinator
+webapp-manager
+thunderbird
+timeshift
 EOL
 fi
 
