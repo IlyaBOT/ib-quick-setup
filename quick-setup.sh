@@ -125,9 +125,9 @@ select_software() {
 
 # Software installation
 install_selected() {
-    echo -e "\nУстанавливаем выбранное ПО..."
+    echo -e "\nInstalling selected software..."
     for pkg in $@; do
-        echo "Установка: $pkg"
+        echo "Installing: $pkg"
         apt install -y "$pkg"
         if [ "$pkg" == "beep" ]; then
             sed -i 's/^blacklist pcspkr/#blacklist pcspkr/' /etc/modprobe.d/blacklist.conf
