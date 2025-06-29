@@ -74,7 +74,7 @@ main_menu() {
         1) category_menu ;;
         2) remove_unwanted ;;
         3) install_whitesur_theme ;;
-        4) xfce-terminal_catttheme ;;
+        4) xfce-terminal_cattheme ;;
         5) extra_settings ;;
         6) exit 0 ;;
     esac
@@ -211,7 +211,7 @@ extra_settings(){
 #    main_menu
 #}
 
-xfce-terminal_catttheme(){
+xfce-terminal_cattheme(){
     mkdir -p ~/.config/xfce4/terminal/
     mkdir -p ~/.local/share/xfce4/terminal/colorschemes/
     dialog --yesno "Do you want to install the Catppuccin Mocha theme for XFCE terminal?" 10 40
